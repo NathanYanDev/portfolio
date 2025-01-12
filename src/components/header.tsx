@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { Moon, Sun } from "lucide-react";
 import { motion } from "motion/react";
-import { playfairDisplay } from "./ui/fonts";
+import { playfairDisplay } from "./ui/fonts/fonts";
 import { Button } from "./ui/button";
 import {
 	useLanguage,
@@ -44,7 +44,7 @@ export const Header = () => {
 						Nathan Yan
 					</h1>
 				</Link>
-				<nav>
+				<nav className="flex items-center">
 					<ul className="w-full flex items-center gap-3">
 						<Link href={"/about"}>
 							<li className="text-xl">
@@ -57,11 +57,6 @@ export const Header = () => {
 							</li>
 						</Link>
 
-						<Link href={"/contact"}>
-							<li className="text-xl">
-								{lang === "pt-BR" ? "Contatos" : "Contacts"}
-							</li>
-						</Link>
 						{/* TODO: COLOCAR O CURRÍCULO EM PT E EM EN NUM DRIVE E PEGAR O LINK */}
 						{lang === "pt-BR" ? (
 							<Link href={"/"} className="mr-3">
@@ -76,29 +71,27 @@ export const Header = () => {
 								</li>
 							</Link>
 						)}
-						<li>
-							<Select defaultValue="pt-BR" onValueChange={handleLangChange}>
-								<SelectTrigger>
-									<SelectValue placeholder="Selecione uma linguagem" />
-								</SelectTrigger>
-								<SelectContent>
-									<SelectGroup>
-										<SelectItem value="pt-BR">Português - BR</SelectItem>
-										<SelectItem value="en">English</SelectItem>
-									</SelectGroup>
-								</SelectContent>
-							</Select>
-						</li>
-						<li className="mt-2">
-							<motion.button
-								whileHover={{ scale: 1.2 }}
-								type="button"
-								onClick={handleChangeTheme}
-							>
-								{theme === "light" ? <Sun /> : <Moon />}
-							</motion.button>
-						</li>
 					</ul>
+					<div className="flex items-center gap-3">
+						<Select defaultValue="pt-BR" onValueChange={handleLangChange}>
+							<SelectTrigger>
+								<SelectValue placeholder="Selecione uma linguagem" />
+							</SelectTrigger>
+							<SelectContent>
+								<SelectGroup>
+									<SelectItem value="pt-BR">Português - BR</SelectItem>
+									<SelectItem value="en">English</SelectItem>
+								</SelectGroup>
+							</SelectContent>
+						</Select>
+						<motion.button
+							whileHover={{ scale: 1.2 }}
+							type="button"
+							onClick={handleChangeTheme}
+						>
+							{theme === "light" ? <Sun /> : <Moon />}
+						</motion.button>
+					</div>
 				</nav>
 			</section>
 		</header>

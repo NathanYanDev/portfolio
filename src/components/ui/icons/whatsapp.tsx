@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-function WhatsappIcon(props: SVGProps<SVGSVGElement>) {
+export default function WhatsappIcon(props: SVGProps<SVGSVGElement>) {
 	return (
 		<svg
 			fill="#25D366"
@@ -13,5 +13,3 @@ function WhatsappIcon(props: SVGProps<SVGSVGElement>) {
 		</svg>
 	);
 }
-
-export default WhatsappIcon;

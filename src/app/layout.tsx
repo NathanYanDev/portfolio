@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/src/contexts/themeProvider";
 import { Header } from "../components/header";
-import { jost } from "../components/ui/fonts";
-import { LanguageProvider, useLanguage } from "../contexts/languageProvider";
+import { jost } from "../components/ui/fonts/fonts";
+import { LanguageProvider } from "../contexts/languageProvider";
 
 export const metadata: Metadata = {
 	title: {
@@ -20,7 +20,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="pt-BR" suppressHydrationWarning className={jost.className}>
+		<html lang="pt-BR" className={jost.className}>
 			<body className="antialiased">
 				<ThemeProvider
 					attribute="class"
