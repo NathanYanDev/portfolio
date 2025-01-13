@@ -42,7 +42,7 @@ export const Contacts = () => {
 						</div>
 						<div className="flex items-center  gap-2 h-3/5 px-4">
 							<Mail width={80} height={80} />
-							<Link href={"mailto:yan_dev@zohomail.com"} target="_blank">
+							<Link href={"mailto:nathan.yan@zohomail.com"} target="_blank">
 								<span className="text-5xl">Yan Dev</span>
 							</Link>
 						</div>

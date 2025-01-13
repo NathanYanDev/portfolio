@@ -15,7 +15,7 @@ export const Presentation = () => {
 		<div className="w-full screen-height" id="presentation">
 			<section className="max-w-7xl mx-auto px-5 screen-height flex items-center gap-12 mb-5">
 				<div className="h-full">
-					<Image src={Hero} alt="Hero" className="h-full w-[600px]" />
+					<Image src={Hero} alt="Hero" className="h-full w-[600px]" priority />
 				</div>
 				<div className="flex flex-col">
 					<h1 className="text-5xl font-bold">
@@ -31,7 +31,7 @@ export const Presentation = () => {
 					<div className="flex items-center justify-center gap-3 mt-5">
 						<Link
 							href={
-								"mailto:yan_dev@zohomail.com?subject=Tenho%20interesse%20em%20te%20contratar"
+								"mailto:nathan.yan@zohomail.com?subject=Tenho%20interesse%20em%20te%20contratar"
 							}
 						>
 							<motion.button
