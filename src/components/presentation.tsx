@@ -6,6 +6,7 @@ import WhatsappIcon from "@/src/components/ui/icons/whatsapp";
 import Link from "next/link";
 
 import { useLanguage } from "../contexts/languageProvider";
+import { motion } from "motion/react";
 
 export const Presentation = () => {
 	const { language: lang } = useLanguage();
@@ -14,7 +15,7 @@ export const Presentation = () => {
 		<div className="w-full screen-height" id="presentation">
 			<section className="max-w-7xl mx-auto px-5 screen-height flex items-center gap-12 mb-5">
 				<div className="h-full">
-					<Image src={Hero} alt="Hero image" className="h-full w-[600px]" />
+					<Image src={Hero} alt="Hero" className="h-full w-[600px]" />
 				</div>
 				<div className="flex flex-col">
 					<h1 className="text-5xl font-bold">
@@ -33,21 +34,23 @@ export const Presentation = () => {
 								"mailto:yan_dev@zohomail.com?subject=Tenho%20interesse%20em%20te%20contratar"
 							}
 						>
-							<button
+							<motion.button
 								type="button"
 								className="px-4 py-2 border border-black dark:border-white rounded-3xl text-xl"
+								whileHover={{ scale: 1.1 }}
 							>
 								{lang === "pt-BR" ? "Contrate-me" : "Hire me"}
-							</button>
+							</motion.button>
 						</Link>
 						<Link href={"https://wa.me/5511998579175"}>
-							<button
+							<motion.button
 								type="button"
-								className="px-4 py-2 border border-[#25D366] rounded-3xl  flex items-center gap-3 text-xl"
+								className="px-4 py-2 border border-[#25D366]  rounded-3xl flex items-center gap-3 text-xl"
+								whileHover={{ scale: 1.1 }}
 							>
 								<WhatsappIcon width={24} height={24} />
 								Whatsapp
-							</button>
+							</motion.button>
 						</Link>
 					</div>
 				</div>

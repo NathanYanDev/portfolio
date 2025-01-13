@@ -7,12 +7,11 @@ import {
 
 import { taskifyData, miniblogData } from "@/src/data/sources";
 
-import { TriangleAlert } from "lucide-react";
-
 import { CarouselData } from "@/src/components/carouselData";
 
 import type { Metadata } from "next";
 import { PageTitle } from "@/src/components/pageTitle";
+import { PageFooter } from "@/src/components/pageFooter";
 
 export const metadata: Metadata = {
 	title: "Projetos",
@@ -25,8 +24,8 @@ export default function Projects() {
 				<PageTitle
 					titlePT="Projetos"
 					titleEN="Projects"
-					descriptionPT="Alguns projetos pessoais..."
-					descriptionEN="Some personal projects..."
+					descriptionPT="Alguns projetos pessoais"
+					descriptionEN="Some personal projects"
 				/>
 				<div className="w-full">
 					<Carousel className="border dark:border-[#3183FF] rounded-xl mb-7">
@@ -48,11 +47,10 @@ export default function Projects() {
 						<CarouselPrevious />
 						<CarouselNext />
 					</Carousel>
-
-					<div className="flex items-center justify-center gap-3">
-						<TriangleAlert color="#FF0" />
-						<h2 className="text-2xl py-4">Em breve mais projetos...</h2>
-					</div>
+					<PageFooter
+						textPT={"Em breve mais projetos..."}
+						textEN={"More projects coming soon..."}
+					/>
 				</div>
 			</section>
 		</main>

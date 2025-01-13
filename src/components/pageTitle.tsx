@@ -16,7 +16,7 @@ export const PageTitle = ({
 }: PageTitleProps) => {
 	const { language } = useLanguage();
 	return (
-		<div className="mb-5">
+		<div className="mb-5 flex flex-col items-center">
 			<h1 className="text-5xl font-bold underline">
 				{language === "pt-BR" ? titlePT : titleEN}
 			</h1>
