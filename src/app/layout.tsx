@@ -5,6 +5,8 @@ import { Header } from "../components/header";
 import { jost } from "../components/ui/fonts/fonts";
 import { LanguageProvider } from "../contexts/languageProvider";
 
+import PortfolioPreview from "@/public/assets/portfolioPreview.png";
+
 export const metadata: Metadata = {
 	title: {
 		template: "%s | Portfolio Nathan Yan",
@@ -12,6 +14,28 @@ export const metadata: Metadata = {
 	},
 	description:
 		"Portfolio de Nathan Yan, desenvolvedor Full Stack. Aqui estão alguns projetos pessoais e formas de me contatar!",
+	keywords: [
+		"Portfolio",
+		"React",
+		"Javascript",
+		"Full stack",
+		"Front end",
+		"Back end",
+	],
+	openGraph: {
+		title: "Portfolio Nathan Yan",
+		images: PortfolioPreview.src,
+	},
+	robots: {
+		index: true,
+		follow: true,
+		nocache: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			noimageindex: true,
+		},
+	},
 };
 
 export default function RootLayout({

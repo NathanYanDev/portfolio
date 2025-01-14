@@ -59,13 +59,25 @@ export const Header = () => {
 
 						{/* TODO: COLOCAR O CURRÍCULO EM PT E EM EN NUM DRIVE E PEGAR O LINK */}
 						{lang === "pt-BR" ? (
-							<Link href={"/"} className="mr-3">
+							<Link
+								href={
+									"https://www.dropbox.com/scl/fi/ulvvls861cy610uap2b75/Curriculo-Nathan-Yan.pdf?rlkey=jdjl4u49071t80pyvkow3ui95&st=ohm5001y&dl=0"
+								}
+								target="_blank"
+								className="mr-3"
+							>
 								<li>
 									<Button className="text-lg bg-[#3183FF]">Currículo</Button>
 								</li>
 							</Link>
 						) : (
-							<Link href={"/"} className="mr-3">
+							<Link
+								href={
+									"https://www.dropbox.com/scl/fi/4hago46lfyq8qpdfwi3hs/Resume-Nathan-Yan.pdf?rlkey=gdigiw97mwmqyfnp7el4bb314&st=ovirsjsp&dl=0"
+								}
+								target="_blank"
+								className="mr-3"
+							>
 								<li>
 									<Button className="text-lg bg-[#3183FF]">Resume</Button>
 								</li>
